@@ -1,0 +1,39 @@
+# How to compute the first character of a string that is repeated?
+
+def rept(str):
+    dict_chars={}
+    for i in str:
+        if i in dict_chars:
+            dict_chars[i]=dict_chars[i]+1
+            return i
+        else:
+            dict_chars[i]=1
+    return "no characters repeat"
+
+str="mayank"
+print(rept(str))
+
+
+
+
+
+# How to compute the first character of a string that is not repeated?
+
+def not_rept(str):
+    dict_chars={}
+    list_singles=[]
+    for i in str:
+        if i in dict_chars:
+            list_singles.remove(i)
+            dict_chars[i]=dict_chars[i]+1
+        else:
+            dict_chars[i]=1
+            list_singles.append(i)
+    if len(list_singles)!=0:
+        return list_singles[0]
+    else:
+        return "all characters repeat"
+
+
+str="mmaankk"
+print(not_rept(str))

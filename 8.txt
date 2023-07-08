@@ -1,0 +1,23 @@
+# How to verify if two strings are a rotation mutually?
+
+def isrotation(str1,str2):
+
+    if len(str1)!=len(str2):
+        return False
+    # abcdabcd
+    str3=str1+str1
+
+    if str2 in str3:
+        return True
+    else:
+        return False
+
+
+#driver code
+str1="mayank"
+str2="codezz"
+z=isrotation(str1,str2)
+if z:
+    print("yes they are rotation")
+else:
+    print("nope they are not")

@@ -1,0 +1,20 @@
+# Find the count for the occurrence of a particular character in a string
+
+def occur(str):
+    counter=0
+    char=input("Enter the character : ")
+
+    for i in str:
+        if i==char:
+            counter=counter+1
+    return counter
+
+
+
+#driver code
+str="mayank codezz"
+a=occur(str)
+if a>=1:
+    print(f"the character comes for {a} times")
+else:
+    print("character does not exists in the string")

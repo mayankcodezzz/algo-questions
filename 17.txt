@@ -1,0 +1,16 @@
+# Determine the second largest element of an array
+
+def second_largest(arr):
+    largest1=arr[0]
+    largest2=arr[0]
+
+    for i in arr:
+        if i > largest1:
+            largest1=i
+
+    for i in arr:
+        if i > largest2 and i < largest1:
+            largest2=i
+    return largest2
+arr=[1,2,3,5,2,69,78,41,143,28]
+print(second_largest(arr))

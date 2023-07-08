@@ -1,0 +1,11 @@
+# How to calculate the number of numerical digits in a string?
+
+def countt(str):
+    counter=0
+    for i in str:
+        if i.isdigit():
+            counter=counter+1
+    return counter
+
+str="mayank"
+print(countt(str))

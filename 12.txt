@@ -1,0 +1,22 @@
+#  How to get the matching elements in an integer array?
+
+def match_elements(arr):
+    dict_arr={}
+    dict_match={}
+
+    for i in arr:
+        if i in dict_arr:
+            dict_arr[i]=dict_arr[i]+1
+        else:
+            dict_arr[i]=1
+
+    for num,count in dict_arr.items():
+        if count>1:
+            dict_match[num]=count
+    if len(dict_match)!=0:
+        return dict_match
+    else:
+        return "nothing matched"
+#driver code
+arr=[1,2,3,4,5]
+print(match_elements(arr))

@@ -1,0 +1,15 @@
+# Explain the bubble sort algorithm
+
+def bubbled(arr):
+    ln=len(arr)
+
+    for i in range(ln):
+        for j in range(ln-i-1):
+
+            if arr[j] > arr[j+1]:
+                #swap
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+    return arr
+
+arr=[4,2,7,1,3]
+print(bubbled(arr))

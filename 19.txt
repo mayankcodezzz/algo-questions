@@ -1,0 +1,9 @@
+#  How to remove special characters in a string that is in lowercase
+
+import re
+def clean_str(str):
+    cleaned_string = re.sub(r'[^a-z]','',str)
+    return cleaned_string
+
+str = "Mayank$%&@ CodeZZ!!"
+print(clean_str(str))

@@ -1,0 +1,20 @@
+# How to search a missing number in an array that contains integers from 1 to 100?
+
+def num(arr):
+    sum=0
+    sum2=0
+    for i in range(arr[-1]+1):
+        sum=sum+i
+    for i in arr:
+        sum2=sum2+i
+    if sum2!=sum:
+        return sum-sum2
+    else:
+        return "nothing changed"
+
+arr=[]
+for i in range(100):
+    arr.append(i+1)
+arr.remove(11)
+print(num(arr))
+print(arr)

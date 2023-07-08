@@ -1,0 +1,19 @@
+# How to get the matching characters in a string?
+
+def match_chars(namm):
+   dict_chars={}
+   list_matched={}
+
+   for i in namm:
+      if i in dict_chars:
+         dict_chars[i]=1+dict_chars[i]
+      else:
+         dict_chars[i]=1
+
+   for char,count in dict_chars.items():
+      if count>1:
+         list_matched[char]=count
+   return list_matched
+#driver code
+stra="abracadabra"
+print("matched chars: ",match_chars(stra))

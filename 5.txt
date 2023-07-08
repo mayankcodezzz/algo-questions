@@ -1,0 +1,19 @@
+# How to calculate the number of vowels and consonants in a string?
+
+def count_vowels(str):
+   count=0
+   for i in str.lower():
+      if i=="a" or i=="e" or  i=="i" or i=="o" or i=="u":
+         count=count+1
+   return count
+
+
+
+
+
+
+str="mayankcodezz"
+z=count_vowels(str)
+x=len(str)-z
+print("vowels:",z)
+print("consonants:",x)

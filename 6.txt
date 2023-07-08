@@ -1,0 +1,31 @@
+# How do you prove that the two strings are anagrams?
+
+
+def isanagrams(str1,str2):
+
+   dict_str1={}
+   dict_str2={}
+
+   for i in str1:
+      if i in dict_str1:
+         dict_str1[i]=1+dict_str1[i]
+      else:
+         dict_str1[i]=1
+
+
+   for i in str2:
+      if i in dict_str2:
+         dict_str2[i]=1+dict_str2[i]
+      else:
+         dict_str2[i]=1
+
+   if dict_str1==dict_str2:
+      return "is anagrams"
+   else:
+      return "not anagrams"
+
+
+#driver code
+str1="mayank"
+str2="knayam"
+print("the given string is : ",isanagrams(str1,str2))

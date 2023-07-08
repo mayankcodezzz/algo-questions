@@ -1,0 +1,27 @@
+# How to delete the repeated elements in an integer array?
+
+def dele(arr):
+    dict_num={}
+    list_repeated_nums={}
+
+    for i in arr:
+        if i in dict_num:
+            dict_num[i]=dict_num[i]+1
+        else:
+            dict_num[i]=1
+
+    for num,count in dict_num.items():
+        if count>1:
+            list_repeated_nums[num]=count
+
+    return list_repeated_nums
+
+
+
+arr=[1,2,3,5]
+
+for i,count in dele(arr).items():
+    for j in range(count):
+        arr.remove(i)
+
+print(arr)

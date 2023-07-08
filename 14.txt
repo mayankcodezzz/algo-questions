@@ -1,0 +1,15 @@
+#Determine the largest and the smallest element of an array which is not sorted.
+
+def large_small(arr):
+    small=arr[0]
+    large=arr[0]
+
+    for i in arr:
+        if i < small:
+            small=i
+        if i>large:
+            large=i
+    return {small,large}
+
+arr=[2,68,5,2,7,94,6,8,4]
+print(large_small(arr))
